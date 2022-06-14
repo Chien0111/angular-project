@@ -1,0 +1,70 @@
+<div class="container">
+  <h1>Học về Form</h1>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="name"
+        name="name"
+      />
+      <span *ngIf="name === ''" class="errorMessage">* Cần phải nhập tên</span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="text"
+        class="form-control"
+        id="password"
+        required
+        [(ngModel)]="password"
+        name="password"
+      />
+      <span *ngIf="password === ''" class="errorMessage"
+        >* Cần phải nhập mật khẩu</span
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="vehicle">Vehicle</label>
+      <br />
+      <select (change)="selectVehicle($event)">
+        <option *ngFor="let vehicle of vehicles">
+          {{ vehicle }}
+        </option>
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!myForm.form.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+<!-- <p >Post:</p>
+<div *ngFor="let post of posts">
+  <li>{{ post | json}}</li>
+</div> -->
+<p>Số tin nhắn <span class="badge"> {{posts?.length}} </span></p>
+<table id="customers" style="border-collapse: collapse;" >
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{ post?.id }}</td>
+    <td>{{ post?.title }}</td>
+    <td>{{ post?.author }}</td>
+  </tr>
+</table>
+<div>
+  <button (click)="addPost()">Thêm post mới </button> <span class="badge"> {{posts?.length}} </span>
+</div>

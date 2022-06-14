@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 2
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 3
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 4
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 5
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 6
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 7
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 8
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 9
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 10
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 11
+    },
+    {
+      "title": "chien",
+      "author": "author testing",
+      "id": 12
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
